@@ -56,7 +56,7 @@ public class VarastoTest {
     }
 
     @Test
-    public void ottaminenLisÃ¤Ã¤Tilaa() {
+    public void ottaminenLisaaTilaa() {
         varasto.lisaaVarastoon(8);
 
         varasto.otaVarastosta(2);
@@ -114,7 +114,7 @@ public class VarastoTest {
     }
     
     @Test
-    public void lisaaLiikaaTäyttääVaraston() {
+    public void lisaaLiikaaTayttaaVaraston() {
         varasto.lisaaVarastoon(20);
         assertEquals(0, varasto.paljonkoMahtuu(), vertailuTarkkuus);
         assertEquals(10, varasto.getSaldo(), vertailuTarkkuus);
@@ -129,7 +129,7 @@ public class VarastoTest {
     }
     
     @Test
-    public void liikaOttamineTyhjentääVaraston() {
+    public void liikaOttamineTyhjentaaVaraston() {
         varasto.lisaaVarastoon(5);
         double otettu = varasto.otaVarastosta(10);
         assertEquals(5, otettu, vertailuTarkkuus);
