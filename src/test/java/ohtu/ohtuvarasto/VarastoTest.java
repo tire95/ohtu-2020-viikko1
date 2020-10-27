@@ -138,6 +138,6 @@ public class VarastoTest {
     
     @Test
     public void toStringToimii() {
-        assertEquals(varasto.toString(), "saldo = 1.0, vielä tilaa 10.0");
+        assertEquals(varasto.toString(), "saldo = 0.0, vielä tilaa 10.0");
     }
 }
