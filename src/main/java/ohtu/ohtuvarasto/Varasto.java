@@ -24,12 +24,12 @@ public class Varasto
         } else // virheellinen, nollataan
         {
             this.tilavuus = 0.0;
-            this.saldo = 0.0;   // => käyttökelvoton varasto
         }
-        if (alkuSaldo <= tilavuus) { // mahtuu
-            this.saldo = alkuSaldo;
+        if (alkuSaldo < 0.0) {
+            this.saldo = 0.0;
         } else {
-            this.saldo = tilavuus;  // täyteen ja ylimäärä hukkaan!
+            this.saldo = 0.0;
+            lisaaVarastoon(alkuSaldo);
         }
     }
 
